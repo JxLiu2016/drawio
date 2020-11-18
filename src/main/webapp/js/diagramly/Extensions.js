@@ -86,13 +86,13 @@ LucidImporter = {};
 			'PreparationBlock': 'shape=hexagon;perimeter=hexagonPerimeter2',
 			'DataBlock': 'shape=parallelogram;perimeter=parallelogramPerimeter;anchorPointDirection=0',
 			'DataBlockNew': 'shape=parallelogram;perimeter=parallelogramPerimeter;anchorPointDirection=0',
-			'DatabaseBlock': 'shape=cylinder;size=0.1;anchorPointDirection=0;boundedLbl=1;',
-			'DirectAccessStorageBlock': 'shape=cylinder;direction=south;size=0.1;anchorPointDirection=0;boundedLbl=1;',
+			'DatabaseBlock': 'shape=cylinder3;size=10;anchorPointDirection=0;boundedLbl=1;',
+			'DirectAccessStorageBlock': 'shape=cylinder3;direction=south;size=10;anchorPointDirection=0;boundedLbl=1;',
 			'InternalStorageBlock': 'shape=internalStorage;dx=10;dy=10',
 			'PaperTapeBlock': 'shape=tape;size=0.2',
 			'ManualOperationBlockNew': 'shape=trapezoid;perimeter=trapezoidPerimeter;anchorPointDirection=0;flipV=1',
 			'DelayBlock': 'shape=delay',
-			'StoredDataBlock': 'shape=dataStorage',
+			'StoredDataBlock': 'shape=cylinder3;boundedLbl=1;size=15;lid=0;direction=south;',
 			'MergeBlock': 'triangle;direction=south;anchorPointDirection=0',
 			'ConnectorBlock': 'ellipse',
 			'OrBlock': s + 'flowchart.summing_function',
@@ -114,11 +114,11 @@ LucidImporter = {};
 			'BraceBlockRotated': cs,
 			'BracketBlockRotated': cs,
 //Geometric shapes
-			'IsoscelesTriangleBlock': 'triangle;direction=north;anchorPointDirection=0',
+			'IsoscelesTriangleBlock': 'shape=mxgraph.basic.acute_triangle;dx=0.5;anchorPointDirection=0',
 			'RightTriangleBlock': s + 'basic.orthogonal_triangle',
 			'PentagonBlock': s + 'basic.pentagon',
 			'HexagonBlock': 'shape=hexagon;perimeter=hexagonPerimeter2',
-			'OctagonBlock': s + 'basic.octagon',
+			'OctagonBlock': s + 'basic.octagon2;dx=15;',
 			'CrossBlock': 'shape=cross;size=0.6',
 			'CloudBlock': 'ellipse;shape=cloud',
 			'HeartBlock': s + 'basic.heart',
@@ -219,7 +219,7 @@ LucidImporter = {};
 			'MindMapDiamondBlock' : 'shape=rhombus',
 			'MindMapPentagonBlock' : s + 'basic.pentagon',
 			'MindMapHexagonBlock' : 'shape=hexagon;perimeter=hexagonPerimeter2',
-			'MindMapOctagonBlock' : s + 'basic.octagon',
+			'MindMapOctagonBlock' : s + 'basic.octagon2;dx=10;',
 			'MindMapCrossBlock' : s + 'basic.cross2;dx=20',
 //Entity Relationship
 			'ERDEntityBlock' : cs,
@@ -230,7 +230,8 @@ LucidImporter = {};
 			'UMLClassBlock': cs,
 			'UMLActiveClassBlock': 'shape=process',
 			'UMLMultiplicityBlock' : cs,
-			'UMLPackageBlock': 'shape=folder;tabPosition=left',
+//			'UMLPackageBlock': 'shape=folder;tabPosition=left',
+			'UMLPackageBlock': '',
 			'UMLConstraintBlock' : cs,
 			'UMLNoteBlock': 'shape=note;size=15',
 			'UMLNoteBlockV2': 'shape=note;size=15',
@@ -334,8 +335,8 @@ LucidImporter = {};
 //Shipments
 			'VSMExternalShipmentAirplaneBlock' : s + 'lean_mapping.airplane_7',
 			'VSMExternalShipmentForkliftBlock' : s + 'lean_mapping.move_by_forklift',
-			'VSMExternalShipmentTruckBlock' : s + 'lean_mapping.truck_shipment',
-			'VSMExternalShipmentBoatBlock' : s + 'lean_mapping.boat_shipment',
+			'VSMExternalShipmentTruckBlock' : s + 'lean_mapping.truck_shipment;align=left;',
+			'VSMExternalShipmentBoatBlock' : s + 'lean_mapping.boat_shipment;verticalAlign=bottom;',
 //Information
 			'VSMProductionControlBlock' : cs,
 			'VSMOtherInformationBlock' : '',
@@ -1649,62 +1650,62 @@ LucidImporter = {};
 			'Cisco_cisco_workstation' : s + 'cisco.computers_and_peripherals.workstation;' + c,
 			'Cisco_cisco_www_server' : s + 'cisco.servers.www_server;' + c,
 //Computers and Monitors
-			'NET_PC' : s + 'networks.pc;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Virtual-PC' : s + 'networks.virtual_pc;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Terminal' : s + 'networks.terminal;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_DataPipe' : s + 'networks.bus;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_SlateDevice' : s + 'networks.tablet;fillColor=#29AAE1;strokeColor=#ffffff', 
-			'NET_TabletDevice' : s + 'networks.tablet;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Laptop' : s + 'networks.laptop;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_PDA' : s + 'networks.mobile;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_CRTMonitor' : s + 'networks.monitor;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_LCDMonitor' : s + 'networks.monitor;fillColor=#29AAE1;strokeColor=#ffffff',
+			'NET_PC' : s + 'networks.pc;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Virtual-PC' : s + 'networks.virtual_pc;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Terminal' : s + 'networks.terminal;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_DataPipe' : s + 'networks.bus;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_SlateDevice' : s + 'networks.tablet;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;', 
+			'NET_TabletDevice' : s + 'networks.tablet;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Laptop' : s + 'networks.laptop;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_PDA' : s + 'networks.mobile;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_CRTMonitor' : s + 'networks.monitor;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_LCDMonitor' : s + 'networks.monitor;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
 //Detailed Network Diagrams
 //			'NET_ABSwitch' NA
 //			'NET_Repeater' NA
 //			'NET_DiagnosticDevice' NA
 //			'NET_CardReader' NA
 //			'NET_PatchPanel' NA
-			'NET_RadioTower' : s + 'networks.radio_tower;fillColor=#29AAE1;strokeColor=#ffffff',
+			'NET_RadioTower' : s + 'networks.radio_tower;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
 //			'NET_BiometricReader' NA
-			'NET_ExternalHardDrive' : s + 'networks.external_storage;fillColor=#29AAE1;strokeColor=#ffffff',
+			'NET_ExternalHardDrive' : s + 'networks.external_storage;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
 //			'NET_WebService' NA
 //			'NET_FiberOptic' NA
-			'NET_SatelliteDish' : s + 'networks.satellite_dish;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Satellite' : s + 'networks.satellite;fillColor=#29AAE1;strokeColor=#ffffff',
+			'NET_SatelliteDish' : s + 'networks.satellite_dish;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Satellite' : s + 'networks.satellite;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
 //			'NET_VoIPPhone' NA
 //			'NET_PBX' NA
 //			'NET_MLPS' NA
 //Basic Network Shapes
-			'NET_WirelessAccessPoint' : s + 'networks.radio_tower;fillColor=#29AAE1;strokeColor=#29AAE1',
+			'NET_WirelessAccessPoint' : s + 'networks.radio_tower;fillColor=#29AAE1;strokeColor=#29AAE1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
 			'NET_RingNetwork' : cs,
 			'NET_Ethernet' : cs,
-			'NET_Server' : s + 'networks.server;fillColor=#29AAE1;strokeColor=#ffffff',
+			'NET_Server' : s + 'networks.server;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
 //			'NET_ExternalMediaDrive' NA
-			'NET_Mainframe' : s + 'networks.mainframe;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Router' : s + 'networks.wireless_hub;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Switch' : s + 'networks.switch;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Firewall' : s + 'networks.firewall;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_User' : s + 'networks.user_male;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_CommLink' : s + 'networks.comm_link_edge;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_SuperComputer' : s + 'networks.supercomputer;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_VirtualServer' : s + 'networks.virtual_server;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Printer' : s + 'networks.printer;fillColor=#29AAE1;strokeColor=#ffffff',
+			'NET_Mainframe' : s + 'networks.mainframe;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Router' : s + 'networks.wireless_hub;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Switch' : s + 'networks.switch;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Firewall' : s + 'networks.firewall;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_User' : s + 'networks.user_male;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_CommLink' : s + 'networks.comm_link_edge;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_SuperComputer' : s + 'networks.supercomputer;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_VirtualServer' : s + 'networks.virtual_server;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Printer' : s + 'networks.printer;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
 //			'NET_Plotter' NA
-			'NET_Scanner' : s + 'networks.scanner;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Copier' : s + 'networks.copier;fillColor=#29AAE1;strokeColor=#ffffff',
+			'NET_Scanner' : s + 'networks.scanner;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Copier' : s + 'networks.copier;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
 //			'NET_FaxMachine' NA
-			'NET_MultiFunctionMachine' : s + 'networks.copier;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Projector' : s + 'networks.video_projector;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_ProjectorScreen' : s + 'networks.video_projector_screen;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Bridge' : s + 'networks.router;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Hub' : s + 'networks.hub;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Modem' : s + 'networks.modem;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_Telephone' : s + 'signs.tech.telephone_5;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_CellPhone' : s + 'networks.mobile;fillColor=#29AAE1;strokeColor=#ffffff',
-			'NET_SmartPhone' : s + 'networks.mobile;fillColor=#29AAE1;strokeColor=#ffffff',
+			'NET_MultiFunctionMachine' : s + 'networks.copier;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Projector' : s + 'networks.video_projector;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_ProjectorScreen' : s + 'networks.video_projector_screen;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Bridge' : s + 'networks.router;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Hub' : s + 'networks.hub;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Modem' : s + 'networks.modem;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_Telephone' : s + 'signs.tech.telephone_5;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_CellPhone' : s + 'networks.mobile;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
+			'NET_SmartPhone' : s + 'networks.mobile;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
 //			'NET_VideoPhone' NA
-			'NET_Camera' : s + 'signs.tech.camera_2;fillColor=#29AAE1;strokeColor=#ffffff',
+			'NET_Camera' : s + 'signs.tech.camera_2;fillColor=#29AAE1;strokeColor=#ffffff;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;',
 //			'NET_VideoCamera' NA
 //Server Racks
 			'RackServerRack' : s + 'rackGeneral.container;container=1;collapsible=0;childLayout=rack;marginLeft=9;marginRight=9;marginTop=21;marginBottom=22;textColor=#000000;numDisp=off',
@@ -1791,26 +1792,37 @@ LucidImporter = {};
 			'EE_Lightbulb' : s + 'electrical.miscellaneous.light_bulb',
 			'EE_IntegratedCircuit' : 'shape=mxgraph.electrical.logic_gates.dual_inline_ic',
 //Power Sources
-			'EE_AcSource' : s + 'electrical.signal_sources.ac_source;strokeWidth=1',
-			'EE_VoltageSource' : s + 'electrical.signal_sources.dc_source_3',
-			'EE_CurrentSource' : s + 'electrical.signal_sources.dc_source_2;direction=north',
-			'EE_ControlledCurrentSource' : s + 'electrical.signal_sources.dependent_source_2;direction=west',
-			'EE_ControlledVoltageSource' : s + 'electrical.signal_sources.dependent_source_3',
+			'EE_AcSource' : s + 'electrical.signal_sources.ac_source;strokeWidth=1;verticalLabelPosition=middle;align=left;verticalAlign=top;labelPosition=right;',
+			'EE_VoltageSource' : s + 'electrical.signal_sources.dc_source_3;verticalLabelPosition=middle;align=left;verticalAlign=top;labelPosition=right;',
+			'EE_CurrentSource' : s + 'electrical.signal_sources.dc_source_2;direction=north;verticalLabelPosition=middle;align=left;verticalAlign=top;labelPosition=right;',
+			'EE_ControlledCurrentSource' : s + 'electrical.signal_sources.dependent_source_2;direction=west;verticalLabelPosition=middle;align=left;verticalAlign=top;labelPosition=right;',
+			'EE_ControlledVoltageSource' : s + 'electrical.signal_sources.dependent_source_3;verticalLabelPosition=middle;align=left;verticalAlign=top;labelPosition=right;',
 			'EE_DcSource1' : s + 'electrical.miscellaneous.monocell_battery;flipH=1;verticalLabelPosition=bottom;verticalAlign=top',
 			'EE_DcSource2' : s + 'electrical.miscellaneous.multicell_battery;flipH=1;verticalLabelPosition=bottom;verticalAlign=top',
 			'EE_Vss' : s + 'electrical.signal_sources.vss2;verticalLabelPosition=top;verticalAlign=bottom;fontSize=24',
 			'EE_Vdd' : s + 'electrical.signal_sources.vdd;verticalLabelPosition=bottom;verticalAlign=top',
 //Transistors
+			
 			'EE_BJT_NPN1' : s + 'electrical.transistors.pnp_transistor_1',
+			'EE_BJT_NPN1_V2' : s + 'electrical.transistors.npn_transistor_1;',
 			'EE_BJT_PNP1' : s + 'electrical.transistors.npn_transistor_1',
+			'EE_BJT_PNP1_V2' : s + 'electrical.transistors.pnp_transistor_1',
 			'EE_JFET_P' : s + 'electrical.transistors.p-channel_jfet_1;flipV=1',
+			'EE_JFET_P_V2' : s + 'electrical.transistors.p-channel_jfet_1;flipV=1',
 			'EE_JFET_N' : s + 'electrical.transistors.n-channel_jfet_1',
+			'EE_JFET_N_V2' : s + 'electrical.transistors.n-channel_jfet_1',
 			'EE_MOSFET_P1' : s + 'electrical.mosfets1.mosfet_ic_p;flipV=1',
+			'EE_MOSFET_P1_V2' : s + 'electrical.mosfets1.mosfet_ic_p;flipV=1',
 			'EE_MOSFET_P2' : s + 'electrical.mosfets1.mosfet_p_no_bulk',
+			'EE_MOSFET_P2_V2' : s + 'electrical.mosfets1.mosfet_p_no_bulk',
 			'EE_MOSFET_P3' : s + 'electrical.mosfets1.p-channel_mosfet_1;flipV=1',
+			'EE_MOSFET_P3_V2' : s + 'electrical.mosfets1.p-channel_mosfet_1;flipV=1',
 			'EE_MOSFET_N1' : s + 'electrical.mosfets1.mosfet_ic_n',
+			'EE_MOSFET_N1_V2' : s + 'electrical.mosfets1.mosfet_ic_n',
 			'EE_MOSFET_N2' : s + 'electrical.mosfets1.mosfet_n_no_bulk',
+			'EE_MOSFET_N2_V2' : s + 'electrical.mosfets1.mosfet_n_no_bulk',
 			'EE_MOSFET_N3' : s + 'electrical.mosfets1.n-channel_mosfet_1',
+			'EE_MOSFET_N3_V2' : s + 'electrical.mosfets1.n-channel_mosfet_1',
 //Relays
 //			'EE_SPST' NA
 //			'EE_SPDT' NA
@@ -2046,6 +2058,20 @@ LucidImporter = {};
 			'GCPIconGenericBlock' : gcpIcon + 'placeholder',
 			'GCPIconPredictionAPIBlock' : gcpIcon + 'prediction_api',
 			//'GCPGoogleCloudPlatformLockupBlock' : gcpIcon + 'gcp_google_cloud_platform_lockup',
+			'GCPAutoScalingModifier' : 'shape=mxgraph.gcp2.modifiers_autoscaling;fillColor=#757575;strokeColor=none;',
+			'GCPCustomVirtualMachineModifier' : 'shape=mxgraph.gcp2.modifiers_custom_virtual_machine;fillColor=#757575;strokeColor=none;',
+			'GCPHighCPUMachineModifier' : 'shape=mxgraph.gcp2.modifiers_high_cpu_machine;fillColor=#757575;strokeColor=none;',
+			'GCPHighMemoryMachineModifier' : 'shape=mxgraph.gcp2.modifiers_high_memory_machine;fillColor=#757575;strokeColor=none;',
+			'GCPPreemptableVSModifier' : 'shape=mxgraph.gcp2.modifiers_preemptable_vm;fillColor=#757575;strokeColor=none;',
+			'GCPSharedCoreMachineF1Modifier' : 'shape=mxgraph.gcp2.modifiers_shared_core_machine_f1;fillColor=#757575;strokeColor=none;',
+			'GCPSharedCoreMachineG1Modifier' : 'shape=mxgraph.gcp2.modifiers_shared_core_machine_g1;fillColor=#757575;strokeColor=none;',
+			'GCPStandardMachineModifier' : 'shape=mxgraph.gcp2.modifiers_standard_machine;fillColor=#757575;strokeColor=none;',
+			'GCPStorageModifier' : 'shape=mxgraph.gcp2.modifiers_storage;fillColor=#757575;strokeColor=none;',
+			'GCPAppEngineProductCard' : cs,
+			'GCPCloudDataflowProductCard' : cs,
+			'GCPCloudDataprocProductCard' : cs,
+			'GCPComputeEngineProductCard' : cs,
+			'GCPContainerEngineProductCard' : cs,
 			
 //Kubernetes Icons
 			'CronjobLabeledKub19' : kupIcon + 'cronjob',
@@ -2345,7 +2371,7 @@ LucidImporter = {};
 			'PEClarifierBlock' : s + 'pid.vessels.bunker_(conical_bottom);verticalLabelPosition=bottom;verticalAlign=top',
 			'PETankBlock' : s + 'pid.vessels.tank_(conical_roof);verticalLabelPosition=bottom;verticalAlign=top',
 			'PETrayColumnBlock' : s + 'pid2misc.column;columnType=tray;verticalLabelPosition=bottom;verticalAlign=top',
-			'PEReactionVesselBlock' : s + 'pid.vessels.reactor',
+			'PEReactionVesselBlock' : s + 'pid.vessels.reactor;verticalLabelPosition=bottom;verticalAlign=top',
 			'PEBin' : s + 'pid.vessels.tank_(conical_bottom)',
 			'PEDomeRoofTank' : s + 'pid.vessels.tank_(dished_roof)',
 			'PEConeRoofTank' : s + 'pid.vessels.tank_(conical_roof)',
@@ -2371,7 +2397,7 @@ LucidImporter = {};
 			'PEShellAndTubeHeat2Block' : s + 'pid.heat_exchangers.shell_and_tube_heat_exchanger_2;verticalLabelPosition=bottom;verticalAlign=top',
 			'PEShellAndTubeHeat3Block' : s + 'pid.heat_exchangers.shell_and_tube_heat_exchanger_1;direction=north;verticalLabelPosition=bottom;verticalAlign=top',
 			'PESinglePassHeatBlock' : s + 'pid.heat_exchangers.single_pass_heat_exchanger;verticalLabelPosition=bottom;verticalAlign=top',
-			'PEHeaterBlock' : s + 'pid.heat_exchangers.heater',
+			'PEHeaterBlock' : s + 'pid.heat_exchangers.heater;verticalLabelPosition=bottom;verticalAlign=top',
 //Pumps
 			'PEEjectorInjectorBlock' : s + 'pid.fittings.injector;verticalLabelPosition=bottom;verticalAlign=top',
 			'PECompressorTurbineBlock' : cs,
@@ -3116,6 +3142,7 @@ LucidImporter = {};
 			'volume2017' : 'shape=mxgraph.aws3.volume;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top',
 			
 // AWS 19 Analytics			
+			
 			'AnalyticsAWS19' : 'shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.analytics;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top',
 			'AmazonAthenaAWS19' : 'shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.athena;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#ffffff',
 			'AmazonCloudSearchAWS19' : 'shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudsearch;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#ffffff',
@@ -3207,7 +3234,15 @@ LucidImporter = {};
 			'AWSElasticBeanstalk_ApplicationAWS19' : 'shape=mxgraph.aws4.application;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=none',
 			'AWSElasticBeanstalk_DeploymentAWS19' : 'shape=mxgraph.aws4.deployment;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=none',
 			'AWSLambda_LambdaFunctionAWS19' : 'shape=mxgraph.aws4.lambda_function;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=none',
-
+			'AWSThinkboxDeadlineAWS19' : 'shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.thinkbox_deadline;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#ffffff;',
+			'AWSThinkboxDraftAWS19' : 'shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.thinkbox_draft;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#ffffff;',
+			'AWSThinkboxFrostAWS19' : 'shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.thinkbox_frost;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#ffffff;',
+			'AWSThinkboxKrakatoaAWS19' : 'shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.thinkbox_krakatoa;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#ffffff;',
+			'AWSThinkboxSequoiaAWS19' : 'shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.thinkbox_sequoia;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#ffffff;',
+			'AWSThinkboxStokeAWS19' : 'shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.thinkbox_stoke;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#ffffff;',
+			'AWSThinkboxXMeshAWS19' : 'shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.thinkbox_xmesh;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#ffffff;',
+			
+			
 // AWS 19 - Cost Management		
 			'AWSCostManagementAWS19' : 'shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cost_management;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top',
 			'AWSBudgetsAWS19' : 'shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.budgets;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#ffffff',
@@ -6385,6 +6420,32 @@ LucidImporter = {};
     	v.insert(icon1);
 	};
 	
+	function addGCP2ExpandedProductCard(icon, scaleX, scaleY, w, h, v, p, a)
+	{
+		if (icon != 'transparent')
+		{
+			var s = mxConstants.STYLE_SHAPE + '=mxgraph.gcp.';
+		}
+		else
+		{
+			var s = mxConstants.STYLE_SHAPE + '=';
+		}
+
+		v.style = 'rounded=1;absoluteArcSize=1;arcSize=2;verticalAlign=bottom;fillColor=#ffffff;strokeColor=#dddddd;whiteSpace=wrap;';
+		v.style += addAllStyles(v.style, p, a, v);
+		
+		v.value = convertText(p);
+    	v.vertex = true;
+	    var icon1 = new mxCell(null, new mxGeometry(0.5, 0, w * 0.7 * scaleX, w * 0.7 * scaleY), 
+	    		s + icon + ';part=1;dashed=0;connectable=0;html=1;strokeColor=none;shadow=0;'); 
+
+	    icon1.geometry.relative = true;
+	    icon1.geometry.offset = new mxPoint(- scaleX * w * 0.35, 10 + (1 - scaleY) * w * 0.35);
+    	icon1.vertex = true;
+    	icon1.style += addAllStyles(icon1.style, p, a, icon1, isLastLblHTML);
+    	v.insert(icon1);
+	};
+	
 	function hasStyle(style, key)
 	{
 		if (style != null && key != null)
@@ -8403,7 +8464,7 @@ LucidImporter = {};
 							getLabelStyle(p.Text, isLastLblHTML);
 						break
 					case 3:
-						v.style += 'shape=ext;dashed=1;dashPattern=2 1;' +
+						v.style += 'shape=ext;dashed=1;dashPattern=2 5;' +
 							getLabelStyle(p.Text, isLastLblHTML);
 						break
 					case 4:
@@ -12210,6 +12271,22 @@ LucidImporter = {};
 			case 'GCPInputBlank' :
 				addGCP2UserDeviceCard('transparent', 1, 1, w, h, v, p, a);
 				break;
+// no corresponding icons, only with shadows							
+//			case 'GCPAppEngineProductCard' :
+//				addGCP2ExpandedProductCard('compute.app_engine', 1, 1, w, h, v, p, a);
+//				break;
+//			case 'GCPCloudDataflowProductCard' :
+//				addGCP2ExpandedProductCard('cloud_dataflow', 1, 1, w, h, v, p, a);
+//				break;
+//			case 'GCPCloudDataprocProductCard' :
+//				addGCP2ExpandedProductCard('cloud_dataproc', 1, 1, w, h, v, p, a);
+//				break;
+//			case 'GCPComputeEngineProductCard' :
+//				addGCP2ExpandedProductCard('compute_engine', 1, 1, w, h, v, p, a);
+//				break;
+//			case 'GCPContainerEngineProductCard' :
+//				addGCP2ExpandedProductCard('compute_engine', 1, 1, w, h, v, p, a);
+//				break;
 			case 'PresentationFrameBlock' :
 				if (p.ZOrder == 0) //These are hidden
 				{
